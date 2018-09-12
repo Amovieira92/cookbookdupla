@@ -4,6 +4,4 @@ class HomeController < ApplicationController
     @recipes = Recipe.all
   end
 
- 
-
 end

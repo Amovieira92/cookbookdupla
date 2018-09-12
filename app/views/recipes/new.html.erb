@@ -1,16 +1,21 @@
 <h1>Cadastrar Receita</h1>
 
-<% form_for Receita.new do |f|
+<%= form_for @recipe do |f| %>
+  <%= f.label :title, "Título" %>
+  <%= f.text_field :title %>
+  <%= f.label :recipe_type, "Tipo da Receita" %>
+  <%= f.text_field :recipe_type %>
+  <%= f.label :cuisine, "Cozinha" %>
+  <%= f.text_field :cuisine %>
+  <%= f.label :difficulty, "Dificuldade" %>
+  <%= f.text_field :difficulty %>
+  <%= f.label :cook_time, "Tempo de Preparo" %>
+  <%= f.number_field :cook_time %>
+  <%= f.label :ingredients, "Ingredientes" %>
+  <%= f.text_area :ingredients %>
+  <%= f.label :cook_method, "Como Preparar" %>
+  <%= f.text_area :cook_method %>
 
-<h1><%= f.label
+  <%= f.submit "Enviar" %>
 
-    expect(page).to have_css('h1', text: 'Tabule')
-    expect(page).to have_css('h3', text: 'Detalhes')
-    expect(page).to have_css('p', text: 'Entrada')
-    expect(page).to have_css('p', text: 'Arabe')
-    expect(page).to have_css('p', text: 'Fácil')
-    expect(page).to have_css('p', text: "45 minutos")
-    expect(page).to have_css('h3', text: 'Ingredientes')
-    expect(page).to have_css('p', text: 'Trigo para quibe, cebola, tomate picado, azeite, salsinha')
-    expect(page).to have_css('h3', text: 'Como Preparar')
-    expect(page).to have_css('p', text:  'Misturar tudo e servir. Adicione limão a gosto.'
+<% end %>
